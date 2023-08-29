@@ -1,24 +1,23 @@
-import CartWidget from '../CartWidget/CartWidget'
+import { Link, NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+
 
 const NavBar = () => {
-    return(
+    return (
         <nav className='navbar navbar-expand-lg bg-body-tertiary'>
             <div className='container-fluid'>
-                
-            
-            <a href='#' className='navbar-brand'>TecnoCompro</a>
+                <h1>
+                    <Link to="/" className='navbar-brand' >TecnoCompra</Link>
+                </h1>
             <ul className='navbar-nav'>
                 <li className='nav-item'>
-                    <a href="#" className='nav-link'>Componentes</a>
+                    <NavLink to="/category/components" className='nav-link' >Componentes</NavLink>
                 </li>
                 <li className='nav-item'>
-                    <a href="#" className='nav-link'>Perifericos</a>
+                    <NavLink to="/category/peripherals" className='nav-link' >Perifericos</NavLink>
                 </li>
                 <li className='nav-item'>
-                    <a href="#" className='nav-link'>Arma tu pc</a>
-                </li>
-                <li className='nav-item'>
-                    <a href="#" className='nav-link'>Combos</a>
+                    <NavLink to="/category/combos" className='nav-link' >Combos</NavLink>
                 </li>
             </ul>
 
@@ -26,6 +25,6 @@ const NavBar = () => {
             </div>
         </nav>
     )
-};
+}
 
 export default NavBar;
